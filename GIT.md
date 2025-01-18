@@ -404,16 +404,20 @@ Feature branching isolates the development of individual features to prevent int
 # Create a new feature branch
 git checkout -b feature/new-feature
 
+
 # Make changes, stage, and commit
 git add .
 git commit -m "Add new feature implementation"
 
+
 # Push the branch to the remote repository
 git push origin feature/new-feature
+
 
 # After completing the feature, merge it back into the main branch
 git checkout main
 git merge feature/new-feature
+
 
 # Delete the feature branch locally and remotely
 git branch -d feature/new-feature
@@ -442,24 +446,30 @@ Release branching supports the finalization of specific releases while keeping t
 # Create a release branch
 git checkout -b release/1.0 develop
 
+
 # Make final changes, stage, and commit
 git add .
 git commit -m "Finalize release 1.0"
+
 
 # Merge the release branch into the main branch
 git checkout main
 git merge release/1.0
 
+
 # Tag the release
 git tag -a v1.0 -m "Release 1.0"
+
 
 # Merge the release branch back into develop
 git checkout develop
 git merge release/1.0
 
+
 # Delete the release branch
 git branch -d release/1.0
 git push origin --delete release/1.0
+
 ```
 
 #### **Pros**:
@@ -516,10 +526,14 @@ GitFlow is a formal branching model designed for complex development workflows. 
    # Apply the fix
    git add .
    git commit -m "Fix critical issue"
+
+   
    # Merge into main and tag
    git checkout main
    git merge hotfix/critical-issue
    git tag -a v1.0.1 -m "Hotfix 1.0.1"
+
+   
    # Merge back into develop
    git checkout develop
    git merge hotfix/critical-issue
