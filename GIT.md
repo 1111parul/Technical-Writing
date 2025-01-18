@@ -495,9 +495,11 @@ GitFlow is a formal branching model designed for complex development workflows. 
 1. **Feature Development**:
    ```bash
    git checkout -b feature/new-feature develop
+   
    # Make changes and commit
    git add .
    git commit -m "Implement new feature"
+   
    # Merge into develop
    git checkout develop
    git merge feature/new-feature
@@ -510,10 +512,12 @@ GitFlow is a formal branching model designed for complex development workflows. 
    # Finalize changes
    git add .
    git commit -m "Prepare release 1.0"
+   
    # Merge into main and tag
    git checkout main
    git merge release/1.0
    git tag -a v1.0 -m "Release 1.0"
+   
    # Merge back into develop
    git checkout develop
    git merge release/1.0
